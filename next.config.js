@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone',
-  // 如果您使用了 Edge Runtime，可能需要添加以下配置
+  // 移除 output: 'standalone'
+  // 保留 Edge Runtime 配置
   experimental: {
     runtime: 'experimental-edge',
   },
