@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
+  experimental: {
+    optimizeCss: true,
+  },
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.optimization.splitChunks.cacheGroups = {
