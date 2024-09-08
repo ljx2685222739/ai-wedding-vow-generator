@@ -3,3 +3,9 @@
 
 interface CloudflareEnv {
 }
+
+declare namespace NodeJS {
+  interface ProcessEnv {
+    ZHIPU_API_KEY: string;
+  }
+}

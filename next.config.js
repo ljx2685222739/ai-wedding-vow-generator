@@ -1,8 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    optimizeCss: true,
-  },
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.optimization.splitChunks.cacheGroups = {
@@ -16,6 +13,12 @@ const nextConfig = {
       config.optimization.splitChunks.maxSize = 20 * 1024 * 1024; // 20MB
     }
     return config;
+  },
+  experimental: {
+    optimizeCss: true,
+  },
+  env: {
+    ZHIPU_API_KEY: process.env.ZHIPU_API_KEY,
   },
 }
 
