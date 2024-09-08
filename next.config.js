@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
   experimental: {
     optimizeCss: true,
   },
@@ -14,6 +13,7 @@ const nextConfig = {
           minChunks: 2,
         },
       };
+      config.optimization.splitChunks.maxSize = 20 * 1024 * 1024; // 20MB
     }
     return config;
   },
