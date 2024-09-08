@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  env: {
-    ZHIPU_API_KEY: process.env.ZHIPU_API_KEY || '2f5004c995d254250479805a00b5dbe2.bhRZGKze2I3Gnn86',
+  output: 'standalone',
+  // 如果您使用了 Edge Runtime，可能需要添加以下配置
+  experimental: {
+    runtime: 'experimental-edge',
   },
 }
 
